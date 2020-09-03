@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div >
+  <input type="text" [(ngModel)]="title" />
+  <p>{{returnFunction()}}</p>
+  <hr/>
+  <p>{{msg}}</p>
+</div>
+<app-server [parentData]="send_val" (child)="msg=$event" ></app-server>
+<!-- <app-server *ngFor="let i of [1]"></app-server> -->

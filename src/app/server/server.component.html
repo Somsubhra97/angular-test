@@ -1,0 +1,25 @@
+<!-- <button class="btn btn-primary" (click)="onCreate()">Add</button>
+<p>{{addServer()}}</p>
+<p>{{test}}</p>
+
+<label>Input</label>
+<input type="text" (input)="onInput($event)"/>
+<br/> -->
+<input type="text" [(ngModel)]="input"/>
+<button (click)="fillServer()">Fill Me</button>
+<ul>
+  <li *ngFor="let server of servers; let i=index"
+      [ngStyle]="{backgroundColor: server=='som'?'pink':'green'}"
+      [ngClass]="{'w-t':server=='som'}"
+  >
+      {{server}}
+    </li>
+</ul>
+
+<p *ngIf="test; else noServer">{{parentData}}</p>
+<ng-template #noServer>
+<p>FALSE</p>
+</ng-template>
+
+<button (click)="dispatcher()">Dispatch To Parent</button>
+
