@@ -7,10 +7,12 @@
 <br/> -->
 <input type="text" [(ngModel)]="input"/>
 <button (click)="fillServer()">Fill Me</button>
+<button (click)="fillParent()">Fill Parent</button>
 <ul>
   <li *ngFor="let server of servers; let i=index"
       [ngStyle]="{backgroundColor: server=='som'?'pink':'green'}"
       [ngClass]="{'w-t':server=='som'}"
+      (click)="sendIdx(i)"
   >
       {{server}}
     </li>

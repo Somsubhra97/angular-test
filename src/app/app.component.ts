@@ -7,11 +7,21 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent  {
   title:string= 'Angular ' + VERSION.major;
   public send_val="Som";
-  public msg;
+  public msg:number;
+  public arr:Array<string>=[];
 
   returnFunction(){
     return this.title;
   }
+
+ del(x){
+  const idx= parseInt(x);
+  console.log(this.arr[idx]);
+ } 
+ fill(x){
+   this.arr.push(x);
+ }
+  
 }
 
 //ng g c server --spec false

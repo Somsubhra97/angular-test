@@ -5,5 +5,9 @@
   <hr/>
   <p>{{msg}}</p>
 </div>
-<app-server [parentData]="send_val" (child)="msg=$event" ></app-server>
+<app-server [parentData]="send_val" (childEvent)="msg=$event" 
+                                    (fill_parent)="fill($event)"
+                                    (send_parent)="del($event)"
+></app-server>
+<p>{{msg}}</p>
 <!-- <app-server *ngFor="let i of [1]"></app-server> -->
