@@ -25,3 +25,13 @@
 
 <button (click)="dispatcher()">Dispatch To Parent</button>
 
+
+<form  class="form" (submit)="Add(Form)" #Form="ngForm">
+    <input type="text" name="title" ngModel>
+    <button type="submit">Add</button>
+</form>
+
+
+<hr/>
+<p>{{title}}</p>
+
