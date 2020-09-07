@@ -24,6 +24,8 @@ export class ServerComponent implements OnInit{
   title:string="";
   
   @Input() public parentData;
+  @Input() public update;
+  @Input() public serverData;
   @Output() public childEvent=new EventEmitter<number>();
   @Output() public fill_parent=new EventEmitter<string>();
   @Output() public send_parent=new EventEmitter();
@@ -37,8 +39,7 @@ export class ServerComponent implements OnInit{
   this.input="";
 }
 sendIdx(x){
-  this.send_parent.emit(x);
-    this.input="";
+  this.send_parent.emit(x);   
 
 }
 Add(x:NgForm){

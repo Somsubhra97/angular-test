@@ -11,7 +11,8 @@ export class AppComponent implements OnInit  {
   title:string= 'Angular ' + VERSION.major;
   public send_val="Som";
   public msg:number;
-  public arr:Array<string>=[];
+  public data:string;
+  public stash:Array<string>=["som","subhra"];
   
   constructor(public info:Service){}
 
@@ -24,11 +25,16 @@ export class AppComponent implements OnInit  {
   }
 
  del(x){
+  // const idx= parseInt(x);
+  // console.log(idx);
+  // this.stash.splice(idx,1);
   const idx= parseInt(x);
-  console.log(this.arr[idx]);
+  this.data=this.stash[idx];
  } 
+
  fill(x){
-   this.arr.push(x);console.log(x);
+   this.stash.push(x);
+   
  }
   
 }

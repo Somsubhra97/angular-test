@@ -5,7 +5,9 @@
   <hr/>
   <p>{{msg}}</p>
 </div>
-<app-server [parentData]="send_val" (childEvent)="msg=$event" 
+<app-server [parentData]="send_val" [serverData]="stash"
+                                    [update]="data"
+                                    (childEvent)="msg=$event" 
                                     (fill_parent)="fill($event)"
                                     (send_parent)="del($event)"
 ></app-server>
