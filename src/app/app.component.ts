@@ -25,11 +25,11 @@ export class AppComponent implements OnInit  {
   }
 
  del(x){
-  // const idx= parseInt(x);
-  // console.log(idx);
-  // this.stash.splice(idx,1);
   const idx= parseInt(x);
-  this.data=this.stash[idx];
+  console.log(idx);
+  this.stash.splice(idx,1);
+  // const idx= parseInt(x);
+  // this.data=this.stash[idx];
  } 
 
  fill(x){
